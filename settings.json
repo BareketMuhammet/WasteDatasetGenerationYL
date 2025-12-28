@@ -1,0 +1,135 @@
+{
+    "RenderSettings": {
+        "RenderEngine":"CYCLES",
+        "CyclesSamples": 16,
+        "RenderDevice": "GPU",
+        "StartFrame": 1,
+        "EndFrame": 250
+    },
+    "CameraSettings": {
+        "SensorWidth": 41.1,
+        "SensorHeight": 22.6,
+        "FocalLength": 30,
+        "ImageWidth": 640,
+        "ImageHeight": 352
+    },
+    "DatasetSettings": {
+        "Version": "2.0",
+        "DatasetDirectory": "dataset",
+        "NumberOfSamples": 5000,
+        "StartIndex": 1,
+        "unclassified": {
+            "id": -1,
+            "name": "unclassified",
+            "Directory": "unclassified",
+            "supercategory": "unrecyclable",
+            "probability": 0.1,
+            "transparentcy": {
+                "transparent": true,
+                "roughness": [0.4, 0.5],
+                "transmission": [0.5, 0.95],
+                "alpha": [0.2, 0.7],
+                "color": { "r": [0.6, 1], "g": [0.6, 1], "b": [0.6, 1]}
+            }
+        },
+        "categories": [
+            {
+                "id": 0,
+                "name": "soda_can",
+                "supercategory": "recyclable",
+                "probability": 0.3,
+                "transparentcy": {
+                    "transparent": false,
+                    "roughness": [0, 0],
+                    "transmission": [0, 0],
+                    "alpha": [0, 0],
+                    "color": { "r": [0, 0], "g": [0, 0], "b": [0, 0] }
+                }
+            },
+            {
+                "id": 1,
+                "name": "pet",
+                "supercategory": "recyclable",
+                "probability": 0.3,
+                "transparentcy": {
+                    "transparent": true,
+                    "roughness": [0.2, 0.25],
+                    "transmission": [1, 1],
+                    "alpha": [0.2, 0.4],
+                    "color": { "r": [0.8, 1], "g": [0.8, 1], "b": [0.8, 1]}
+                }
+            },
+            {
+                "id": 2,
+                "name": "beverage_carton",
+                "supercategory": "recyclable",
+                "probability": 0.3,
+                "transparentcy": {
+                    "transparent": false,
+                    "roughness": [0, 0],
+                    "transmission": [0, 0],
+                    "alpha": [0, 0],
+                    "color": { "r": [0, 0], "g": [0, 0], "b": [0, 0] }
+                }
+            }
+        ]
+    },
+    "PhysicsSettings": {
+        "ActiveCollisionMargin": 0.002,
+        "ActiveMass": 0.2,
+        "ActiveFriction": 0.9,
+        "PassiveCollisionMargin": 0.002,
+        "PassiveMass": 0.4,
+        "PassiveFriction": 0.9
+    },
+    "ObjectsSettings": {
+        "Directory": "fbx_objects",
+        "MinNumberOfInstances": 20,
+        "MaxNumberOfInstances": 50,
+        "Repeat": false,
+        "SpawnBounds": {
+            "X": [-0.2, 0.2],
+            "Y": [-0.2, 0.2],
+            "Z": [-0.6, 0.6]
+        },
+        "RotationRange": {
+            "X": [0, 360],
+            "Y": [0, 360],
+            "Z": [0, 360]
+        }
+    },
+    "LightingSettings": {
+        "MaxNumberOfSources": 3,
+        "MinNumberOfSources": 1,
+        "Radius": 0.1,
+        "MaxPower": 30,
+        "MinPower": 10,
+        "MaxColorTemperature": 7000,
+        "MinColorTemperature": 5000,
+        "LocationLimits": [-0.2, 0.2, -0.2, 0.2, 0.0, 0.1]
+    },
+    "BackgroundSettings": {
+        "WorkArea": {
+            "TextureDirectory": "background_textures",
+            "Scale": [2.5, 2.5, 1],
+            "ConveyorBeltDistance": [0.8, 1.2]
+        },
+        "Augmentation": {
+            "RotationAngleRange": [-30, 30],
+            "OilEffect": {
+                "Probability": 0.7,
+                "StrengthRange": [0.4, 0.9],
+                "NoisyMaskScale": [5, 100]
+            },
+            "BlistersEffect": {
+                "Probability": 0.7,
+                "CountRange": [5, 25],
+                "AmountRange": [1, 5]
+            },
+            "DustEffect": {
+                "Probability": 0.7,
+                "AmountRange": [0.1, 2]
+            }
+        }
+    }
+}
